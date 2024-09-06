@@ -1,16 +1,15 @@
-import { TestBed } from '@angular/core/testing';
+import {Injectable} from '@angular/core';
 
-import { LogoApiService } from './logo-api.service';
+@Injectable({
+  providedIn: 'root'
+})
+export class LogoApiService {
+  baseUrl = 'https://logo.clearbit.com/';
 
-describe('LogoApiService', () => {
-  let service: LogoApiService;
+  constructor() {
+  }
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(LogoApiService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  getUrlToLogo(source: any) {
+    return `${this.baseUrl}${new URL(source.url).hostname}`;
+  }
+}
