@@ -4,5 +4,5 @@
 // Note: In real scenarios, this file is not committed to the source control.
 export const environment = {
   production: true,
-  newsApiKey: '0d5b87d6eed74a768b7f2f7a3ca1bafb'
+  newsApiKey: 'b078728df9a74fa3876def523beb161d'
 };
