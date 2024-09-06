@@ -66,3 +66,4 @@ export class SideNavigationBarComponent implements OnInit {
       })
   }
 }
+
